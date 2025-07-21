@@ -9,7 +9,6 @@ import argparse
 hostname = platform.node()
 topic = ""
 
-
 required_labels = {'app_type', 'app_name', 'alert_action', 'hostname'}
 
 dclient = docker.DockerClient(base_url='unix://var/run/docker.sock')
@@ -45,7 +44,6 @@ def handle_alert(alert):
                 container.restart()
 
 def main() -> None:
-
     parser = argparse.ArgumentParser(description="MQTT ops alerts daemon")
     parser.add_argument("config", nargs='?', type=argparse.FileType('r'), default="config.yaml", \
                         help="path to config file")

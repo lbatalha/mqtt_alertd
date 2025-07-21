@@ -4,7 +4,7 @@ version = "0.1.0"
 description = "MQTT Daemon to act on ops alerts"
 readme = "README.md"
 authors = [
-    { name = "Laura Batalha", email = "lfrb25@gmail.com" }
+    { name = "Laura Batalha", email = "5883822+lbatalha@users.noreply.github.com" }
 ]
 requires-python = ">=3.12"
 dependencies = [
