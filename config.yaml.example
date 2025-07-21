@@ -1,0 +1,7 @@
+mqtt:
+  topic: "grafana/alerts"
+  host: "127.0.0.1"
+  port: 1883
+  use_tls: True
+  username: "grafana" # optional
+  password: "somepass" # optional when username isnt set
