@@ -30,6 +30,9 @@ def handle_alert(alert):
         if not required_labels.issubset(label_keys):
             print("DEBUG: Not enough labels to operate on alert")
             return
+        if labels['hostname'] != hostname:
+            print("Alert is for a different host, ignoring")
+            return
         if labels['app_type'] == 'docker':
             container_name = labels['app_name']
             try:
