@@ -32,7 +32,6 @@ def handle_alert(alert):
             return
         if labels['app_type'] == 'docker':
             container_name = labels['app_name']
-            print(dclient.containers.list())
             try:
                 container = dclient.containers.get(container_name)
             except docker.errors.NotFound:
