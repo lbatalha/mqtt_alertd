@@ -61,7 +61,7 @@ def main() -> None:
     if 'username' in config['mqtt']:
         mqttc.username_pw_set(username=config['mqtt']['username'], password=config['mqtt']['password'])
     print("Connecting to mqtt")
-    if 'use_tls' in config['mqtt'] and config['mqtt']['use_tls']:
+    if config['mqtt'].get('use_tls'):
         mqttc.tls_set(certfile=None,
                 keyfile=None,
                 cert_reqs=ssl.CERT_REQUIRED)
