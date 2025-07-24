@@ -68,3 +68,6 @@ def main() -> None:
         print("Using TLS for MQTT connection")
     mqttc.connect(config['mqtt']['host'], config['mqtt']['port'], 30)
     mqttc.loop_forever()
+
+if __name__ == '__main__':
+    main()
